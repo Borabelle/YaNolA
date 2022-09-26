@@ -75,54 +75,32 @@
 <h2>4. Definitions of Domain Terms</h2><br>
 
 **:sunflower:Host 사회자**<br>
-&nbsp; Host_id 사회자 아이디<br>
-&nbsp; Host_pw 사회자 비밀번호<br>
-&nbsp; User_id 그룹 아이디<br>
-&nbsp; Host_admin 사회자 관리<br>
-&nbsp; Item_admin 아이템 관리<br>
-&nbsp; User_info 그룹 정보<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp; hostId 사회자 아이디(String)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; groupAdminId 그룹 관리 아이디(String)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; group 그룹 정보 (group)<br><br>
 
+:sunflower:**Group 플레이어 그룹**<br>
+&nbsp;&nbsp;&nbsp;&nbsp; groupId 그룹 아이디(String)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; groupRank 그룹 랭킹(int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; groupScore 그룹 점수(int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; groupMileage 그룹 마일리지(var)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; groupItem 구입한 아이템(itemInfo)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; purchaseDateOfItem 아이템 구입일시(date)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; usedDateOfItem 아이템 사용일시(date)<br><br>
 
-:sunflower:**User 그룹**<br>
-&nbsp; User_Id 그룹 아이디<br>
-&nbsp; User_Pw 그룹 비밀번호<br>
-&nbsp; User_Name 그룹 닉네임<br>
-&nbsp; User_Rank 랭킹<br>
-&nbsp; User_Mileage 마일리지<br> 
-&nbsp; User_registerDate 가입일<br>
-&nbsp; User_Item 구입한 아이템<br>
-&nbsp; User_buyItem 아이템 구입일시<br>
-&nbsp; User_useItem 아이템 사용일시<br><br>
-  
-:sunflower:**ItemInfo 아이템 정보**<br>
-&nbsp; Item_category 아이템 종류<br>
-&nbsp; Item_price 아이템 가격  
-&nbsp; Item_usage 아이템 용도<br><br>
+:sunflower:**gameItem 아이템**<br>
+&nbsp;&nbsp;&nbsp;&nbsp; category 아이템 종류(String)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; price 아이템 가격(마일리지와 연동)(int)(<br>
+&nbsp;&nbsp;&nbsp;&nbsp; itemUsage 아이템 용도(아이템과 연동)(boolean)<br><br>
 
-:sunflower:**Item 아이템**<br>
-&nbsp; AnnulTime_Item 플러스된 시간 무효화 아이템<br>
-&nbsp; DoublingScore_Item 점수 2배 베네핏 아이템<br>
-&nbsp; LimitTime_Item 시간제한 아이템<br>
-&nbsp; AnnulMatch_Item 경기 무효화 아이템<br>
-&nbsp; DiscountScore_Item 점수 디스카운트 아이템<br>
-&nbsp; FasterSpeed_Item 테트리스 블록 속도 빠르게<br>
-&nbsp; SlowerSpeed_Item 테트리스 블록 속도 느리게<br><br>
-
-:sunflower:**UserMileage**<br>
-&nbsp; Mileage_status 마일리지 현황<br>
-&nbsp; User_Mileage 마일리지<br> 
-&nbsp; Used_Mileage 사용된 마일리지<br>
-&nbsp; Gain_Mileage 획득한 마일리지
-&nbsp; UsedTime_Mileage <br><br>
-
-:sunflower:**HostAdmin**<br>
-&nbsp; Host_admin 사회자 관리<br><br>
-
-:sunflower:**UserInfo**<br>
-&nbsp; User_info 그룹 정보<br><br>
-
-:sunflower:**ItemAdmin**<br>
-&nbsp; Item_admin 아이템 관리<br><br><br>
+:sunflower:**itemInfo 아이템 정보**(all method)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; annulTimeItem 1등 팀과 비교해 플러스된 시간 무효화 아이템<br>
+&nbsp;&nbsp;&nbsp;&nbsp; doublingScoreItem 점수 2배 베네핏 아이템<br>
+&nbsp;&nbsp;&nbsp;&nbsp; limitTimeItem 시간제한 아이템<br>
+&nbsp;&nbsp;&nbsp;&nbsp; annulMatchItem 경기 무효화 아이템<br>
+&nbsp;&nbsp;&nbsp;&nbsp; discountScoreItem 점수 디스카운트 아이템<br>
+&nbsp;&nbsp;&nbsp;&nbsp; fasterSpeedItem 테트리스 블록 속도 빠르게<br>
+&nbsp;&nbsp;&nbsp;&nbsp; slowerSpeedItem 테트리스 블록 속도 느리게<br><br><br>
 
 <h2>5. DB ERD</h2><br>
 
