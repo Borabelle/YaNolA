@@ -123,7 +123,7 @@
 <img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white">
 <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=SpringBoot&logoColor=white">
 <img src="https://img.shields.io/badge/oracle-FF9E0F?style=for-the-badge&logo=oracle&logoColor=white">
-<img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
+<img src="https://img.shields.io/badge/apache tomcat-382856?style=for-the-badge&logo=apachetomcat&logoColor=white">
 </p>
 </div>
 <div>
@@ -138,10 +138,10 @@
 <div>
  <p>
   <h3>IDE</h3>
- <img src="https://img.shields.io/badge/Eclipse IDE-2C2255?style=for-the-badge&logo=Eclipse IDE&logoColor=white">
+ <img src="https://img.shields.io/badge/Eclipse IDE-456789?style=for-the-badge&logo=Eclipse IDE&logoColor=white">
  <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white">
- <img src="https://img.shields.io/badge/IntelliJ IDEA-254685?style=for-the-badge&logo=IntelliJ IDEA&logoColor=black">
- <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=SQLite&logoColor=white">
+ <img src="https://img.shields.io/badge/IntelliJ IDEA-254685?style=for-the-badge&logo=IntelliJ IDEA&logoColor=white">
+ <img src="https://img.shields.io/badge/SQLite-543879?style=for-the-badge&logo=SQLite&logoColor=white">
  </p>
 </div>
 
