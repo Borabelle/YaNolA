@@ -2,7 +2,7 @@
 
 <h2>1. Goal of the Project</h2>
 
-:bulb: 온라인 게임으로 신나는 레이크레이션을!!😆<br><br><br>
+:bulb: 온라인 게임으로 신나는 레크레이션을!!😆<br><br><br>
 
 <h2>2. Team Members</h2><br>
 
