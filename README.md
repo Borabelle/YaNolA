@@ -43,21 +43,21 @@
 
 
  :four_leaf_clover: 아이템 스토어 구현<br>
- -> 랭킹별 지급 마일리지 고정(?)<br>
- benefit : 본인 팀에 적용시키기 위해 구매<br>
-    a) 시간연장 아이템<br>
-    b) 플러스된 시간 무효화(선착순일 경우 카운트x) 아이템<br>
-    c) 점수 더블 아이템<br>
- penalty : 상대 팀에 적용시키기 위해 구매<br>
-    a) 제한 시간 아이템<br>
-    b) 앞전 경기 무효화 아이템<br>
-    c) 점수 디스카운트 아이템<br><br>
+ &nbsp;&nbsp;&nbsp;&nbsp; -> 랭킹별 지급 마일리지 고정(?)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; benefit : 본인 팀에 적용시키기 위해 구매<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;    a) 시간연장 아이템<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;    b) 플러스된 시간 무효화(선착순일 경우 카운트x) 아이템<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;    c) 점수 더블 아이템<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; penalty : 상대 팀에 적용시키기 위해 구매<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;    a) 제한 시간 아이템<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;    b) 앞전 경기 무효화 아이템<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;    c) 점수 디스카운트 아이템<br><br>
 
- -> 아이템 배포용 게임<br>
-    a) ex) 가위바위보 게임<br>
-    b) 순위별 아이템 갯수 혹은 퀄리티 차등 지급<br><br>
+ &nbsp;&nbsp;&nbsp;&nbsp; -> 아이템 배포용 게임<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;    a) ex) 가위바위보 게임<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;    b) 순위별 아이템 갯수 혹은 퀄리티 차등 지급<br><br>
 
--> 도발용 아이템<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp; -> 도발용 아이템<br><br>
 
 
  :four_leaf_clover: 점수 기능<br>
