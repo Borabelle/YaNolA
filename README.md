@@ -16,22 +16,22 @@
 
 <h2>3. Requirement Analysis</h2><br>
 
-- 메인페이지<br>
+ :four_leaf_clover: 메인페이지<br>
  1) 게임/채팅/로그인/랭킹 바로가기 버튼<br>
  2) 메인페이지 배경음악<br><br>
 
 
-- 전반적인 기능<br>
+ :four_leaf_clover: 전반적인 기능<br>
  1) 사회자id / 그룹id 나누어 구현 -> all<br><br>
 
 
-- 채팅 기능(socket.io)<br>
- 1) 사회자와의 개인채팅(DM)<br>
+ :four_leaf_clover: 채팅 기능(socket.io)<br>
+ 1) 사회자와의 개인 채팅(DM)<br>
  2) 다른 팀과의 채팅(사회자도 참여 가능)<br>
  3) 키보드창 팝업 구현<br><br>
 
 
-- 게임 구현<br>
+ :four_leaf_clover: 게임 구현<br>
  1) 미니게임 4가지<br>
     확정 : 오목, 테트리스, 카드 게임(maybe 메모리)<br>
     후보 : 빙고, 오셀로, 행맨, 2048, 사천성, 가위바위보 하나빼기, 하우로우세븐, 월남뽕, 원카드 등<br>
@@ -39,10 +39,10 @@
  3) 플레이키 별 음<br><br>
 
 
-- 게임 튜토리얼<br><br>
+ :four_leaf_clover: 게임 튜토리얼<br><br>
 
 
-- 아이템 스토어 구현<br>
+ :four_leaf_clover: 아이템 스토어 구현<br>
  -> 랭킹별 지급 마일리지 고정(?)<br>
  benefit : 본인 팀에 적용시키기 위해 구매<br>
     a) 시간연장 아이템<br>
@@ -60,21 +60,21 @@
 -> 도발용 아이템<br><br>
 
 
-- 점수 기능<br>
+ :four_leaf_clover: 점수 기능<br>
  1) Rank : like 오락실 랭킹<br>
     -> id, 플레이시간(선착순 게임), ranking<br>
     -> 게임별 랭킹 및 총점 합산<br>
  2) 점수 초기화<br><br>
 
 
-- 설정
+ :four_leaf_clover: 설정
  1) 키보드, 메인화면 등 테마 변경
  2) 다크모드 지원<br><br><br>
 
 
 <h2>4. Definitions of Domain Terms</h2><br>
 
-**<Host 사회자>**<br>
+**:sunflower:Host 사회자**<br>
 Host_id 사회자 아이디<br>
 Host_pw 사회자 비밀번호<br>
 User_id 그룹 아이디<br>
@@ -82,7 +82,8 @@ Host_admin 사회자 관리<br>
 Item_admin 아이템 관리<br>
 User_info 그룹 정보<br><br>
 
-**<User 그룹>**<br>
+
+:sunflower:**User 그룹**<br>
 User_Id 그룹 아이디<br>
 User_Pw 그룹 비밀번호<br>
 User_Name 그룹 닉네임<br>
@@ -93,13 +94,13 @@ User_Item 구입한 아이템<br>
 User_buyItem 아이템 구입일시<br>
 User_useItem 아이템 사용일시<br><br>
   
-**<ItemInfo 아이템 정보>**<br>
+:sunflower:**ItemInfo 아이템 정보**<br>
 Item_category 아이템 종류<br>
 Item_price 아이템 가격  
 Item_usage 아이템 용도<br><br>
 
-**<Item 아이템>**<br>
-AnnulTime_Item 플러스된 시간 무효화 아이템<br>
+:sunflower:**Item 아이템**<br>
+&nbsp;AnnulTime_Item 플러스된 시간 무효화 아이템<br>
 DoublingScore_Item 점수 2배 베네핏 아이템<br>
 LimitTime_Item 시간제한 아이템<br>
 AnnulMatch_Item 경기 무효화 아이템<br>
@@ -107,26 +108,23 @@ DiscountScore_Item 점수 디스카운트 아이템<br>
 FasterSpeed_Item 테트리스 블록 속도 빠르게<br>
 SlowerSpeed_Item 테트리스 블록 속도 느리게<br><br>
 
-**\<UserMileage\>**<br>
+:sunflower:**UserMileage**<br>
 Mileage_status 마일리지 현황<br>
 User_Mileage 마일리지<br> 
 Used_Mileage 사용된 마일리지<br>
 Gain_Mileage 획득한 마일리지
 UsedTime_Mileage <br><br>
 
-**\<HostAdmin\>**<br>
+:sunflower:**HostAdmin**<br>
 Host_admin 사회자 관리<br><br>
 
-**\<UserInfo\>**<br>
+:sunflower:**UserInfo**<br>
 User_info 그룹 정보<br><br>
 
-**\<ItemAdmin\>**<br>
+:sunflower:**ItemAdmin**<br>
 Item_admin 아이템 관리<br><br><br>
 
-<h2>5. DB ERD</h2><br>
-
-
-<h2>6. Stack</h2><br>
+<h2>5. Stack</h2><br>
 <div>
 <p>
 <h3>Front</h3>
