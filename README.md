@@ -75,56 +75,58 @@
 <h2>4. Definitions of Domain Terms</h2><br>
 
 **:sunflower:Host 사회자**<br>
-Host_id 사회자 아이디<br>
-Host_pw 사회자 비밀번호<br>
-User_id 그룹 아이디<br>
-Host_admin 사회자 관리<br>
-Item_admin 아이템 관리<br>
-User_info 그룹 정보<br><br>
+&nbsp; Host_id 사회자 아이디<br>
+&nbsp; Host_pw 사회자 비밀번호<br>
+&nbsp; User_id 그룹 아이디<br>
+&nbsp; Host_admin 사회자 관리<br>
+&nbsp; Item_admin 아이템 관리<br>
+&nbsp; User_info 그룹 정보<br><br>
 
 
 :sunflower:**User 그룹**<br>
-User_Id 그룹 아이디<br>
-User_Pw 그룹 비밀번호<br>
-User_Name 그룹 닉네임<br>
-User_Rank 랭킹<br>
-User_Mileage 마일리지<br> 
-User_registerDate 가입일<br>
-User_Item 구입한 아이템<br>
-User_buyItem 아이템 구입일시<br>
-User_useItem 아이템 사용일시<br><br>
+&nbsp; User_Id 그룹 아이디<br>
+&nbsp; User_Pw 그룹 비밀번호<br>
+&nbsp; User_Name 그룹 닉네임<br>
+&nbsp; User_Rank 랭킹<br>
+&nbsp; User_Mileage 마일리지<br> 
+&nbsp; User_registerDate 가입일<br>
+&nbsp; User_Item 구입한 아이템<br>
+&nbsp; User_buyItem 아이템 구입일시<br>
+&nbsp; User_useItem 아이템 사용일시<br><br>
   
 :sunflower:**ItemInfo 아이템 정보**<br>
-Item_category 아이템 종류<br>
-Item_price 아이템 가격  
-Item_usage 아이템 용도<br><br>
+&nbsp; Item_category 아이템 종류<br>
+&nbsp; Item_price 아이템 가격  
+&nbsp; Item_usage 아이템 용도<br><br>
 
 :sunflower:**Item 아이템**<br>
-&nbsp;AnnulTime_Item 플러스된 시간 무효화 아이템<br>
-DoublingScore_Item 점수 2배 베네핏 아이템<br>
-LimitTime_Item 시간제한 아이템<br>
-AnnulMatch_Item 경기 무효화 아이템<br>
-DiscountScore_Item 점수 디스카운트 아이템<br>
-FasterSpeed_Item 테트리스 블록 속도 빠르게<br>
-SlowerSpeed_Item 테트리스 블록 속도 느리게<br><br>
+&nbsp; AnnulTime_Item 플러스된 시간 무효화 아이템<br>
+&nbsp; DoublingScore_Item 점수 2배 베네핏 아이템<br>
+&nbsp; LimitTime_Item 시간제한 아이템<br>
+&nbsp; AnnulMatch_Item 경기 무효화 아이템<br>
+&nbsp; DiscountScore_Item 점수 디스카운트 아이템<br>
+&nbsp; FasterSpeed_Item 테트리스 블록 속도 빠르게<br>
+&nbsp; SlowerSpeed_Item 테트리스 블록 속도 느리게<br><br>
 
 :sunflower:**UserMileage**<br>
-Mileage_status 마일리지 현황<br>
-User_Mileage 마일리지<br> 
-Used_Mileage 사용된 마일리지<br>
-Gain_Mileage 획득한 마일리지
-UsedTime_Mileage <br><br>
+&nbsp; Mileage_status 마일리지 현황<br>
+&nbsp; User_Mileage 마일리지<br> 
+&nbsp; Used_Mileage 사용된 마일리지<br>
+&nbsp; Gain_Mileage 획득한 마일리지
+&nbsp; UsedTime_Mileage <br><br>
 
 :sunflower:**HostAdmin**<br>
-Host_admin 사회자 관리<br><br>
+&nbsp; Host_admin 사회자 관리<br><br>
 
 :sunflower:**UserInfo**<br>
-User_info 그룹 정보<br><br>
+&nbsp; User_info 그룹 정보<br><br>
 
 :sunflower:**ItemAdmin**<br>
-Item_admin 아이템 관리<br><br><br>
+&nbsp; Item_admin 아이템 관리<br><br><br>
 
-<h2>5. Stack</h2><br>
+<h2>5. DB ERD</h2><br>
+
+<h2>6. Stack</h2><br>
 <div>
 <p>
 <h3>Front</h3>
