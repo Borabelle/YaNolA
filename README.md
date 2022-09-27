@@ -43,11 +43,11 @@
 
 
  :four_leaf_clover: 아이템 스토어 구현<br>
- &nbsp;&nbsp;&nbsp;&nbsp; -> 랭킹별 지급 마일리지 고정(?)<br>
+ &nbsp;&nbsp;&nbsp;&nbsp; -> 랭킹별 지급 마일리지 고정(?)<br><br>
  &nbsp;&nbsp;&nbsp;&nbsp; benefit : 본인 팀에 적용시키기 위해 구매<br>
  &nbsp;&nbsp;&nbsp;&nbsp;    a) 시간연장 아이템<br>
  &nbsp;&nbsp;&nbsp;&nbsp;    b) 플러스된 시간 무효화(선착순일 경우 카운트x) 아이템<br>
- &nbsp;&nbsp;&nbsp;&nbsp;    c) 점수 더블 아이템<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;    c) 점수 더블 아이템<br><br>
  &nbsp;&nbsp;&nbsp;&nbsp; penalty : 상대 팀에 적용시키기 위해 구매<br>
  &nbsp;&nbsp;&nbsp;&nbsp;    a) 제한 시간 아이템<br>
  &nbsp;&nbsp;&nbsp;&nbsp;    b) 앞전 경기 무효화 아이템<br>
