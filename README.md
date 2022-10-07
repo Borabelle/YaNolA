@@ -6,70 +6,225 @@
 
 <h2>2. Team Members</h2><br>
 
-:seedling: 천보라 - 프로젝트 설정, 게임 구현, 게임 튜토리얼, DB, admin 랭킹 관리, user 랭킹 통계, admin 회원관리, admin 몸풀기게임, store 매출 통계, 이미지 서버 구축<br>
+:seedling: 천보라 - 프로젝트 설정, 게임 구현, DB, 랭킹 서버, 이미지 서버 구축, 메인페이지 UI<br>
 
-:seedling: 문형기 - 게임 구현, 게임 튜토리얼, DB, user 마이페이지, 계정 탈퇴, 마일리지 현황, 주문 목록, 아이템 사용 현황, store 매출 통계, user 몸풀기게임<br>
+:seedling: 문형기 - 게임 구현, DB, 마이페이지, 로그인 세션, 이미지 서버 구축<br>
 
-:seedling: 서영석 - 프로젝트 설정, 게임 구현, 게임 튜토리얼, 이미지 서버 구축, DB, admin 아이템관리, API, admin 몸풀기게임, 주문 목록, 아이템 사용 현황<br>
+:seedling: 서영석 - 프로젝트 설정, 게임 구현, DB, 로그인, 랭킹 서버, 이미지 서버 구축<br>
 
-:seedling: 오치헌 - 게임 구현, 게임 튜토리얼, DB, 채팅창, 마일리지 현황, 로그인, 로그아웃, 아이디/비번 찾기, user 회원 가입, user 마이페이지, 계정 탈퇴, user 몸풀기 게임<br><br><br>
+:seedling: 오치헌 - 게임 구현, DB, 채팅창, 로그인 세션, 메인페이지 UI<br><br><br>
 
-<h2>3. Requirement Analysis</h2><br>
+<h2>3. Requirements Analysis</h2><br>
 
- :four_leaf_clover: 메인페이지<br>
- 1) 게임/채팅/로그인/랭킹 바로가기 버튼<br>
- 2) 메인페이지 배경음악<br><br>
-
-
- :four_leaf_clover: 전반적인 기능<br>
- 1) 사회자id / 그룹id 나누어 구현 -> all<br><br>
-
-
- :four_leaf_clover: 채팅 기능(socket.io)<br>
- 1) 사회자와의 개인 채팅(DM)<br>
- 2) 다른 팀과의 채팅(사회자도 참여 가능)<br>
- 3) 키보드창 팝업 구현<br><br>
-
-
- :four_leaf_clover: 게임 구현<br>
- 1) 미니게임 4가지<br>
-    확정 : 오목, 테트리스, 카드 게임(maybe 메모리)<br>
-    후보 : 빙고, 오셀로, 행맨, 2048, 사천성, 가위바위보 하나빼기, 하우로우세븐, 월남뽕, 원카드 등<br>
- 2) 게임별 배경음악<br>
- 3) 플레이키 별 음<br><br>
+ :four_leaf_clover: usecase Join<br>
+- 설명 : 게임 플레이를 위한 회원가입<br>
+- 사전 조건 : 사용자 회원 가입 미완료<br>
+- 사후 상태 : 회원가입 완료, 로그인 가능<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 회원가입 요청<br>
+    3. 정보(그룹아이디) 입력<br>
+  - system(백엔드)<br>
+     2. 회원가입 페이지<br>
+     4. 가입완료 페이지<br>
+- 예외 발생 : 아이디 중복 -> 경고창 띄움<br><br>
 
 
- :four_leaf_clover: 게임 튜토리얼<br><br>
+ :four_leaf_clover: usecase Login<br>
+- 설명 : 게임 플레이 및 정보 조회를 위한 로그인<br>
+- 사전 조건 : 회원가입 완료 상태<br>
+- 사후 상태 : 로그인 완료<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 로그인 요청<br>
+    3. 그룹 아이디 입력<br>
+  - system(백엔드)<br>
+    2. 로그인 페이지<br>
+    4. 아이디 일치 여부 확인 후 세션 처리<br>
+- 예외 발생 : 아이디 불일치 계정의 로그인 시도 -> 오류 문구 출력(모달)<br><br>
 
 
- :four_leaf_clover: 아이템 스토어 구현<br>
- &nbsp;&nbsp;&nbsp;&nbsp; -> 랭킹별 지급 마일리지 고정(?)<br><br>
- &nbsp;&nbsp;&nbsp;&nbsp; benefit : 본인 팀에 적용시키기 위해 구매<br>
- &nbsp;&nbsp;&nbsp;&nbsp;    a) 시간연장 아이템<br>
- &nbsp;&nbsp;&nbsp;&nbsp;    b) 플러스된 시간 무효화(선착순일 경우 카운트x) 아이템<br>
- &nbsp;&nbsp;&nbsp;&nbsp;    c) 점수 더블 아이템<br><br>
- &nbsp;&nbsp;&nbsp;&nbsp; penalty : 상대 팀에 적용시키기 위해 구매<br>
- &nbsp;&nbsp;&nbsp;&nbsp;    a) 제한 시간 아이템<br>
- &nbsp;&nbsp;&nbsp;&nbsp;    b) 앞전 경기 무효화 아이템<br>
- &nbsp;&nbsp;&nbsp;&nbsp;    c) 점수 디스카운트 아이템<br><br>
 
- &nbsp;&nbsp;&nbsp;&nbsp; -> 아이템 배포용 게임<br>
- &nbsp;&nbsp;&nbsp;&nbsp;    a) ex) 가위바위보 게임<br>
- &nbsp;&nbsp;&nbsp;&nbsp;    b) 순위별 아이템 갯수 혹은 퀄리티 차등 지급<br><br>
-
-&nbsp;&nbsp;&nbsp;&nbsp; -> 도발용 아이템<br><br>
+ :four_leaf_clover: usecase Logout<br>
+- 설명 : 로그아웃<br>
+- 사전 조건 : 로그인 상태<br>
+- 사후 상태 : 로그아웃 완료<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 로그아웃 요청<br>
+  - system(백엔드)<br>
+    2. 세션 제거<br>
+- 예외 발생 : 無<br><br>
 
 
- :four_leaf_clover: 점수 기능<br>
- 1) Rank : like 오락실 랭킹<br>
-    -> id, 플레이시간(선착순 게임), ranking<br>
-    -> 게임별 랭킹 및 총점 합산<br>
- 2) 점수 초기화<br><br>
+
+ :four_leaf_clover: usecase Main page<br>
+- 설명 : 사이트 요약 페이지, 로그인/아웃, 랭킹, 설정, 마이페이지, 마일리지<br>
+- 사전 조건 : 그룹 플레이어의 접속<br>
+- 사후 상태 : 그룹 플레이어 정보 습득<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+  1. 홈페이지 접속<br>
+  - system(백엔드)<br>
+  2. 홈페이지 호출<br>
+- 예외 발생 : 無<br><br>
 
 
- :four_leaf_clover: 설정
- 1) 키보드, 메인화면 등 테마 변경
- 2) 다크모드 지원<br><br><br>
+
+ :four_leaf_clover: usecase Mileage<br>
+- 설명 : 마일리지 현황만 확인<br>
+- 사전 조건 : 그룹 플레이어의 요청<br>
+- 사후 상태 : 그룹 플레이어 정보 습득<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 홈페이지 접속<br>
+    3. Mileage 선택<br>
+  - system(백엔드)<br>
+    2. 홈페이지호출<br>
+    4. Mileage 현황만 팝업 호출<br>
+- 예외 발생 : 無<br><br>
+
+
+ :four_leaf_clover: usecase Ranking<br>
+- 설명 : 랭킹 정보(rank, group Id, score, playtime) 확인<br>
+- 사전 조건 : 로그인 상태, 그룹 플레이어의 요청<br>
+- 사후 상태 : 그룹 플레이어 정보 습득<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 홈페이지 접속<br>
+    3.  Ranking 선택<br>
+  - system(백엔드)<br>
+    2. 홈페이지 호출<br>
+    4. Score 호출<br>
+- 예외 발생 : 無<br><br>
+
+
+
+ :four_leaf_clover: usecase Store<br>
+- 설명 : 게임 아이템 종류 확인 및 구매, 구매 후 보유 아이템 확인 바로가기, 구매 취소<br>
+- 사전 조건 : 로그인 상태 및 아이템 선택 완료<br>
+- 사후 상태 : 구매 완료 or 구매 취소<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. Store 페이지 요청<br>
+    3. Item image 클릭 시<br>
+    5. Yes 클릭 시 / No 클릭 시<br>
+    7.  Item Inventory 바로가기 클릭 시<br>
+  - system(백엔드)<br>
+    2. 구매 가능한 Item 리스트 호출<br>
+    4. 구매하시겠습니까? 팝업 호출<br>
+    6. 구매 완료 페이지 호출 / Store 페이지로 콜백<br>
+    8. 보유 중인 Item Iist 호출(Item Inventory)<br>
+- 예외 발생 : 無<br><br>
+
+
+
+ :four_leaf_clover: usecase Mypage<br>
+- 설명 : 그룹명, Mileage 내역/현황, Score, playtime, 보유 Item 확인<br>
+- 사전 조건 : 로그인 상태, 그룹 플레이어의 요청<br>
+- 사후 상태 : 그룹 플레이어 정보 습득<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 홈페이지 접속<br>
+    3. Mypage 선택<br>
+  - system(백엔드)<br>
+    2. 홈페이지 호출<br>
+    4. Score list, playtime list, Item Inventory, Mileage 내역 호출<br>
+- 예외 발생 : 無<br><br>
+
+
+
+ :four_leaf_clover: usecase Mypage - Mileage<br>
+- 설명 : 마일리지 내역 조회<br>
+- 사전 조건 : 로그인 상태, 마이페이지 선택<br>
+- 사후 상태 : 마일리지 내역 확인<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 마이페이지 -> 마일리지 내역 요청<br>
+  - system(백엔드)<br>
+    2. 마일리지 정보 호출<br>
+       (마일리지 획득일, 마일리지 사용일, 마일리지 현황)<br>
+- 예외 발생 : 無<br><br>
+
+
+
+ :four_leaf_clover: usecase Mypage - Item Inventory<br>
+- 설명 : 아이템 보유 현황<br>
+- 사전 조건 : 로그인 상태, 마이페이지 선택<br>
+- 사후 상태 : 아이템 보유 현황 확인<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 마이페이지 -> 아이템 보유 현황 요청<br>
+  - system(백엔드)<br>
+    2. 로그인한 계정의 아이템 보유 내역 호출<br>
+- 예외 발생 : 無<br><br>
+
+
+ :four_leaf_clover: usecase Item 구매 후 Mileage<br>
+- 설명 : Item 구매 후 Mileage 현황 확인<br>
+- 사전 조건 : 로그인 상태, 메뉴<br>
+- 사후 상태 : 그룹 플레이어 정보 습득<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. Store 페이지 요청<br>
+    3. Item image 클릭 시<br>
+    5. Yes 클릭 시 / No 클릭 시<br>
+    7.  Item Inventory 바로가기 클릭 시<br>
+  - system(백엔드)<br>
+    2. 구매 가능한 Item 리스트 호출<br>
+    4. 구매하시겠습니까? 팝업 호출<br>
+    6. 구매 완료 페이지 호출 / Store 페이지로 콜백<br>
+    8. 보유 중인 Item Iist 호출(Item Inventory)<br>
+- 예외 발생 : 無<br><br>
+
+
+
+ :four_leaf_clover: usecase 도발하러 가기<br>
+- 설명 : 실시간 채팅<br>
+- 사전 조건 : 그룹 플레이어의 요청<br>
+- 사후 상태 : 그룹 플레이어 정보 습득<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 홈페이지 접속<br>
+    3.  도발하러 가기 선택<br>
+  - system(백엔드)<br>
+    2. 홈페이지 호출<br>
+    4. 채팅 페이지 팝업 호출<br>
+예외 발생 : 無<br><br>
+
+
+ :four_leaf_clover: usecase 게임을 시작해볼까?<br>
+- 설명 : 게임 실행<br>
+- 사전 조건 : 그룹 플레이어의 요청<br>
+- 사후 상태 : 그룹 플레이어 정보 습득<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 홈페이지 접속<br>
+    3.  게임을 시작해볼까? 클릭 시<br>
+    5. Start 클릭 시<br>
+  - system(백엔드)<br>
+    2. 홈페이지 호출<br>
+    4. Tetris Start 모달 호출<br>
+    6. Tetris 게임 페이지 호출<br>
+- 예외 발생 : 無<br><br>
+
+
+
+ :four_leaf_clover: usecase Setting<br>
+- 설명 : 다크모드로 테마 변경, 글씨체 변경<br>
+- 사전 조건 : 그룹 플레이어의 요청<br>
+- 사후 상태 : 그룹 플레이어 정보 습득<br>
+- 기본 흐름 :<br>
+  - actor(유저화면)<br>
+    1. 홈페이지 접속<br>
+    3.  Setting 선택<br>
+    5. Dark mode/산세체 클릭 시<br>
+  - system(백엔드)<br>
+    2. 홈페이지 호출<br>
+    4. Setting 페이지 호출<br>
+    6. 전체 페이지에 다크모드/산세체 적용<br>
+- 예외 발생 : 無<br><br>
+
 
 
 <h2>4. Definitions of Domain Terms</h2><br>
